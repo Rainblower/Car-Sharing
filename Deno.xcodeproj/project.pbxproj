@@ -25,7 +25,6 @@
 		10691F0B22C219E600CC1B64 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F0822C219E600CC1B64 /* gear.png */; };
 		10691F0C22C219E600CC1B64 /* his.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F0922C219E600CC1B64 /* his.png */; };
 		10691F0D22C219E600CC1B64 /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F0A22C219E600CC1B64 /* fav.png */; };
-		10691F1122C21A5900CC1B64 /* gears.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F1022C21A5900CC1B64 /* gears.png */; };
 		10691F1322C21AA400CC1B64 /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F1222C21AA400CC1B64 /* burger.png */; };
 		10691F1822C21B2100CC1B64 /* miniburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F1722C21B2100CC1B64 /* miniburger.png */; };
 		10691F1A22C21CC600CC1B64 /* blur-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F1922C21CC600CC1B64 /* blur-2.png */; };
@@ -80,10 +79,8 @@
 		10691F0822C219E600CC1B64 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = ../gear.png; sourceTree = "<group>"; };
 		10691F0922C219E600CC1B64 /* his.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = his.png; sourceTree = "<group>"; };
 		10691F0A22C219E600CC1B64 /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fav.png; path = ../fav.png; sourceTree = "<group>"; };
-		10691F1022C21A5900CC1B64 /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gears.png; path = ../../gears.png; sourceTree = "<group>"; };
 		10691F1222C21AA400CC1B64 /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
 		10691F1522C21AB000CC1B64 /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gears.png; sourceTree = "<group>"; };
-		10691F1622C21AB400CC1B64 /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gears.png; path = ../../../gears.png; sourceTree = "<group>"; };
 		10691F1722C21B2100CC1B64 /* miniburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = miniburger.png; sourceTree = "<group>"; };
 		10691F1922C21CC600CC1B64 /* blur-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blur-2.png"; sourceTree = "<group>"; };
 		10691F1B22C21D1900CC1B64 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -160,7 +157,6 @@
 				10691EC022C1FBF300CC1B64 /* AppDelegate.swift */,
 				10691EC722C1FBF400CC1B64 /* Assets.xcassets */,
 				10691ECC22C1FBF400CC1B64 /* Info.plist */,
-				10691F1022C21A5900CC1B64 /* gears.png */,
 				10691F0422C2175E00CC1B64 /* Car.swift */,
 				10691F1F22C2222E00CC1B64 /* CustomTableViewCell.swift */,
 			);
@@ -221,7 +217,6 @@
 				10691F1222C21AA400CC1B64 /* burger.png */,
 				10691F1722C21B2100CC1B64 /* miniburger.png */,
 				10691EFA22C2027200CC1B64 /* person.png */,
-				10691F1622C21AB400CC1B64 /* gears.png */,
 				10691EF922C2027200CC1B64 /* textfield.png */,
 			);
 			path = Resources;
@@ -366,7 +361,6 @@
 				10691F0B22C219E600CC1B64 /* gear.png in Resources */,
 				10691EFD22C2027200CC1B64 /* person.png in Resources */,
 				10691EFC22C2027200CC1B64 /* textfield.png in Resources */,
-				10691F1122C21A5900CC1B64 /* gears.png in Resources */,
 				10691F1822C21B2100CC1B64 /* miniburger.png in Resources */,
 				10691ECB22C1FBF400CC1B64 /* LaunchScreen.storyboard in Resources */,
 				10691EC822C1FBF400CC1B64 /* Assets.xcassets in Resources */,

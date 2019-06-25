@@ -16,7 +16,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
         table.tableFooterView = UIView()
         
         cells.append(cell(name: "Kia Rio", price: "$15", time: "15 min"))
@@ -24,6 +24,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         cells.append(cell(name: "Kia Rio", price: "$15", time: "15 min"))
 
+        table.delegate = self
+        table.dataSource = self
+        
         table.reloadData()
         // Do any additional setup after loading the view.
     }
@@ -51,11 +54,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
-        cell.nameT = cells[indexPath.row].name
-        cell.timeT = cells[indexPath.row].time
-        cell.priceT = cells[indexPath.row].price
+        cell.name.text = cells[indexPath.row].name
+        cell.time.text = cells[indexPath.row].time
+        cell.price.text = cells[indexPath.row].price
         // Configure the cell...
         
         return cell
