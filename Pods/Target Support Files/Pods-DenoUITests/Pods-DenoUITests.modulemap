@@ -1,0 +1,6 @@
+framework module Pods_DenoUITests {
+  umbrella header "Pods-DenoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_Deno {
+  umbrella header "Pods-Deno-umbrella.h"
+
+  export *
+  module * { export * }
+}
