@@ -17,6 +17,11 @@ class SignUpViewController: UIViewController {
     }
     
 
+    @IBAction func back(_ sender: Any) {
+        performSegue(withIdentifier: "Back", sender: self)
+    }
+    
+   
     /*
     // MARK: - Navigation
 

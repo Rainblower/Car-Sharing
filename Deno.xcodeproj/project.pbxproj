@@ -14,8 +14,10 @@
 		10691ECB22C1FBF400CC1B64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10691EC922C1FBF400CC1B64 /* LaunchScreen.storyboard */; };
 		10691ED622C1FBF400CC1B64 /* DenoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691ED522C1FBF400CC1B64 /* DenoTests.swift */; };
 		10691EE122C1FBF400CC1B64 /* DenoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691EE022C1FBF400CC1B64 /* DenoUITests.swift */; };
-		10691EF422C1FE4E00CC1B64 /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691EF222C1FE4E00CC1B64 /* Launch.png */; };
-		10691EF522C1FE4E00CC1B64 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691EF322C1FE4E00CC1B64 /* logo.png */; };
+		10691EFB22C2027200CC1B64 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691EF822C2027200CC1B64 /* password.png */; };
+		10691EFC22C2027200CC1B64 /* textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691EF922C2027200CC1B64 /* textfield.png */; };
+		10691EFD22C2027200CC1B64 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691EFA22C2027200CC1B64 /* person.png */; };
+		10691EFF22C20BCA00CC1B64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691EFE22C20BCA00CC1B64 /* SignUpViewController.swift */; };
 		1D8CBFFDFDC5B71864B3F157 /* Pods_DenoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CFD04A474B15E7478A9A5C /* Pods_DenoTests.framework */; };
 		8F662460380AB7B48EB07400 /* Pods_Deno.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96384E7D067457EAF661A7F /* Pods_Deno.framework */; };
 		C6608DA919A899F7D5C28DBD /* Pods_DenoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3941753C7CB92A024DE56443 /* Pods_DenoUITests.framework */; };
@@ -52,8 +54,10 @@
 		10691EDC22C1FBF400CC1B64 /* DenoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DenoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10691EE022C1FBF400CC1B64 /* DenoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenoUITests.swift; sourceTree = "<group>"; };
 		10691EE222C1FBF400CC1B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10691EF222C1FE4E00CC1B64 /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Launch.png; path = ../../Launch.png; sourceTree = "<group>"; };
-		10691EF322C1FE4E00CC1B64 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		10691EF822C2027200CC1B64 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		10691EF922C2027200CC1B64 /* textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfield.png; sourceTree = "<group>"; };
+		10691EFA22C2027200CC1B64 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
+		10691EFE22C20BCA00CC1B64 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		10CFD04A474B15E7478A9A5C /* Pods_DenoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DenoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AADCA80E2BDD3FC244F5699 /* Pods-DenoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenoUITests.debug.xcconfig"; path = "Target Support Files/Pods-DenoUITests/Pods-DenoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3941753C7CB92A024DE56443 /* Pods_DenoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DenoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,9 +125,10 @@
 				10691EEF22C1FC9900CC1B64 /* Views */,
 				10691EEE22C1FC8C00CC1B64 /* Controllers */,
 				10691EC022C1FBF300CC1B64 /* AppDelegate.swift */,
+				10691EF822C2027200CC1B64 /* password.png */,
+				10691EFA22C2027200CC1B64 /* person.png */,
+				10691EF922C2027200CC1B64 /* textfield.png */,
 				10691EC722C1FBF400CC1B64 /* Assets.xcassets */,
-				10691EF222C1FE4E00CC1B64 /* Launch.png */,
-				10691EF322C1FE4E00CC1B64 /* logo.png */,
 				10691ECC22C1FBF400CC1B64 /* Info.plist */,
 			);
 			path = Deno;
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				10691EC222C1FBF300CC1B64 /* ViewController.swift */,
+				10691EFE22C20BCA00CC1B64 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -295,11 +301,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10691EFD22C2027200CC1B64 /* person.png in Resources */,
+				10691EFC22C2027200CC1B64 /* textfield.png in Resources */,
 				10691ECB22C1FBF400CC1B64 /* LaunchScreen.storyboard in Resources */,
-				10691EF522C1FE4E00CC1B64 /* logo.png in Resources */,
 				10691EC822C1FBF400CC1B64 /* Assets.xcassets in Resources */,
+				10691EFB22C2027200CC1B64 /* password.png in Resources */,
 				10691EC622C1FBF300CC1B64 /* Main.storyboard in Resources */,
-				10691EF422C1FE4E00CC1B64 /* Launch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10691EFF22C20BCA00CC1B64 /* SignUpViewController.swift in Sources */,
 				10691EC322C1FBF300CC1B64 /* ViewController.swift in Sources */,
 				10691EC122C1FBF300CC1B64 /* AppDelegate.swift in Sources */,
 			);
