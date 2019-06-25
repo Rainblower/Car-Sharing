@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Car: Decodable {
+    let id: String
+    let model: String
+    let long: String
+    let lat: String
+}

@@ -10,13 +10,20 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        emailField.text = UserDefaults.standard.string(forKey: "Login")
     }
     
-
+    @IBAction func exitClick(_ sender: Any) {
+        performSegue(withIdentifier: "Login", sender: self)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
