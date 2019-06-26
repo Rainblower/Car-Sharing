@@ -16,6 +16,12 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
     
+    @IBOutlet var btns: [UIButton]!
+    @IBOutlet weak var carName: UILabel!
+    @IBOutlet weak var bookView: UIView!
+    var carId = 0
+    var mode = "Minute"
+    
     var userLocation: CLLocation!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +31,8 @@ class MapViewController: UIViewController {
         
         mapView.showsUserLocation = true
         locationManager.requestWhenInUseAuthorization()
+        
+        print(Int(Date().timeIntervalSince1970))
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -63,14 +71,48 @@ class MapViewController: UIViewController {
             let annotation = MKPointAnnotation()
             
             annotation.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(Double(car.lat)!), longitude: CLLocationDegrees(Double(car.long)!))
-//            annotation.title = art.title
-//            annotation.subtitle  = art.subTitle
+              annotation.title = car.model
+              annotation.subtitle  = car.id
 //            annotation.image = art.image
             
             self.mapView.addAnnotation(annotation)
         }
     }
+    
+    
+    @IBAction func booking(_ sender: Any) {
+        guard let url = URL(string: "http://cars.areas.su/book") else { return }
+        
+        
+        let params: Parameters = ["idCar" : String(carId) , "modePay" : mode, "timeNow" : Int(Date().timeIntervalSince1970), "token" : UserDefaults.standard.string(forKey: "Token")]
 
+        
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON{ (response) in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                
+                
+                UserDefaults.standard.set(json["notice"]["idBook"].stringValue, forKey: "idBook")
+                print(json)
+              self.performSegue(withIdentifier: "Timer", sender: self)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    @IBAction func minute(_ sender: Any) {
+        mode = "Minute"
+    }
+    
+    @IBAction func hour(_ sender: Any) {
+        mode = "Hour"
+    }
+    
+    @IBAction func day(_ sender: Any) {
+        mode = "Day"
+    }
     /*
     // MARK: - Navigation
 
@@ -81,6 +123,14 @@ class MapViewController: UIViewController {
     }
     */
 
+    @IBAction func btnClick(_ sender: UIButton) {
+        
+        for btn in btns {
+            btn.backgroundColor = UIColor(red: 52/255, green: 58/255, blue: 80/255, alpha: 1)
+        }
+        
+        sender.backgroundColor = UIColor(red: 255/255, green: 185/255, blue: 0, alpha: 1)
+    }
 }
 
 extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
@@ -97,8 +147,11 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
+        carId = Int(((view.annotation?.subtitle)!)!)!
+        bookView.isHidden = false
         mapView.removeOverlays(mapView.overlays)
-        
+        view.image = UIImage(named: "selectedCar")
+        carName.text = view.annotation?.title!
         let request = MKDirections.Request()
         
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation.coordinate))
@@ -123,6 +176,11 @@ extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
                 self.mapView.setVisibleMapRect(rout.polyline.boundingMapRect, animated: true)
             }
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        bookView.isHidden = true
+        view.image = UIImage(named: "car-yellow")
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {

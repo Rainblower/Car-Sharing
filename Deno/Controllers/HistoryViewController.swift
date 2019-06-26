@@ -7,35 +7,57 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBOutlet weak var table: UITableView!
-    var cells: [cell] = []
+    var drives: [History] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let url = URL(string: "http://cars.areas.su/history") else { return }
+
         
         table.tableFooterView = UIView()
-        
-        cells.append(cell(name: "Kia Rio", price: "$15", time: "15 min"))
-        cells.append(cell(name: "Kia Rio", price: "$15", time: "15 min"))
-
-        cells.append(cell(name: "Kia Rio", price: "$15", time: "15 min"))
-
         table.delegate = self
         table.dataSource = self
         
-        table.reloadData()
+        
+        let params: Parameters = ["token" : UserDefaults.standard.string(forKey: "Token")]
+        
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print(value)
+             
+                
+                do {
+                    
+                    self.drives = try JSONDecoder().decode([History].self, from: response.data!)
+                    self.table.reloadData()
+                } catch {
+                    print(error)
+                }
+                
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+      
+
+
+
         // Do any additional setup after loading the view.
     }
     
-    struct cell {
-        let name: String
-        let price: String
-        let time: String
-    }
+  
     
     /*
      // MARK: - Navigation
@@ -49,16 +71,16 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cells.count
+        return drives.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
-        cell.name.text = cells[indexPath.row].name
-        cell.time.text = cells[indexPath.row].time
-        cell.price.text = cells[indexPath.row].price
+        cell.name.text = drives[indexPath.row].car_model
+        cell.time.text = String(Int(drives[indexPath.row].timeDrive_seconds)! / 60) + " min"
+        cell.price.text = "$" + drives[indexPath.row].cash
         // Configure the cell...
         
         return cell

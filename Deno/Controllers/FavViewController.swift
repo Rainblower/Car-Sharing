@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  FavViewController.swift
 //  Deno
 //
 //  Created by WSR on 25/06/2019.
@@ -8,28 +8,15 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class FavViewController: UIViewController {
 
-    @IBOutlet weak var emailField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        emailField.text = UserDefaults.standard.string(forKey: "Login")
     }
     
-    @IBAction func exitClick(_ sender: Any) {
-        performSegue(withIdentifier: "Login", sender: self)
-    }
-    
-    
-    @IBAction func privacyClick(_ sender: Any) {
-        
-        guard let url = URL(string: "https://anytimecar.ru/files/docs/anytime.confidence.pdf") else { return }
-        UIApplication.shared.open(url)
-        
-    }
+
     /*
     // MARK: - Navigation
 

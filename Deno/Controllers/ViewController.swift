@@ -41,6 +41,7 @@ class ViewController: UIViewController {
                 
                 if answer == "User is active" {
                     self.logout()
+                    return
                 }
                 
                 if answer == "Error username or password" {

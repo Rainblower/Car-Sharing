@@ -32,6 +32,15 @@
 		10691F1E22C2219000CC1B64 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691F1D22C2219000CC1B64 /* HistoryViewController.swift */; };
 		10691F2022C2222E00CC1B64 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691F1F22C2222E00CC1B64 /* CustomTableViewCell.swift */; };
 		10691F2222C222F900CC1B64 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691F2122C222F900CC1B64 /* TableViewController.swift */; };
+		10691F2422C2365D00CC1B64 /* selectedCar.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F2322C2365D00CC1B64 /* selectedCar.png */; };
+		10691F2822C238B100CC1B64 /* rules.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F2522C238B100CC1B64 /* rules.png */; };
+		10691F2922C238B100CC1B64 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F2622C238B100CC1B64 /* car.png */; };
+		10691F2A22C238B100CC1B64 /* walking.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F2722C238B100CC1B64 /* walking.png */; };
+		10691F2E22C2435300CC1B64 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691F2D22C2435300CC1B64 /* History.swift */; };
+		10691F3022C2455700CC1B64 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691F2F22C2455700CC1B64 /* TimerViewController.swift */; };
+		10691F3222C24D7A00CC1B64 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691F3122C24D7A00CC1B64 /* DriveViewController.swift */; };
+		10691F3422C2528800CC1B64 /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10691F3322C2528800CC1B64 /* FavViewController.swift */; };
+		10691F3622C2530300CC1B64 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 10691F3522C2530300CC1B64 /* plus.png */; };
 		1D8CBFFDFDC5B71864B3F157 /* Pods_DenoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CFD04A474B15E7478A9A5C /* Pods_DenoTests.framework */; };
 		8F662460380AB7B48EB07400 /* Pods_Deno.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96384E7D067457EAF661A7F /* Pods_Deno.framework */; };
 		C6608DA919A899F7D5C28DBD /* Pods_DenoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3941753C7CB92A024DE56443 /* Pods_DenoUITests.framework */; };
@@ -80,13 +89,21 @@
 		10691F0922C219E600CC1B64 /* his.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = his.png; sourceTree = "<group>"; };
 		10691F0A22C219E600CC1B64 /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fav.png; path = ../fav.png; sourceTree = "<group>"; };
 		10691F1222C21AA400CC1B64 /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
-		10691F1522C21AB000CC1B64 /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gears.png; sourceTree = "<group>"; };
 		10691F1722C21B2100CC1B64 /* miniburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = miniburger.png; sourceTree = "<group>"; };
 		10691F1922C21CC600CC1B64 /* blur-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blur-2.png"; sourceTree = "<group>"; };
 		10691F1B22C21D1900CC1B64 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		10691F1D22C2219000CC1B64 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		10691F1F22C2222E00CC1B64 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		10691F2122C222F900CC1B64 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		10691F2322C2365D00CC1B64 /* selectedCar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedCar.png; sourceTree = "<group>"; };
+		10691F2522C238B100CC1B64 /* rules.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rules.png; sourceTree = "<group>"; };
+		10691F2622C238B100CC1B64 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		10691F2722C238B100CC1B64 /* walking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walking.png; sourceTree = "<group>"; };
+		10691F2D22C2435300CC1B64 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		10691F2F22C2455700CC1B64 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		10691F3122C24D7A00CC1B64 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
+		10691F3322C2528800CC1B64 /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
+		10691F3522C2530300CC1B64 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		10CFD04A474B15E7478A9A5C /* Pods_DenoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DenoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AADCA80E2BDD3FC244F5699 /* Pods-DenoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenoUITests.debug.xcconfig"; path = "Target Support Files/Pods-DenoUITests/Pods-DenoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3941753C7CB92A024DE56443 /* Pods_DenoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DenoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +176,7 @@
 				10691ECC22C1FBF400CC1B64 /* Info.plist */,
 				10691F0422C2175E00CC1B64 /* Car.swift */,
 				10691F1F22C2222E00CC1B64 /* CustomTableViewCell.swift */,
+				10691F2D22C2435300CC1B64 /* History.swift */,
 			);
 			path = Deno;
 			sourceTree = "<group>";
@@ -190,6 +208,9 @@
 				10691F1B22C21D1900CC1B64 /* SettingsViewController.swift */,
 				10691F1D22C2219000CC1B64 /* HistoryViewController.swift */,
 				10691F2122C222F900CC1B64 /* TableViewController.swift */,
+				10691F2F22C2455700CC1B64 /* TimerViewController.swift */,
+				10691F3122C24D7A00CC1B64 /* DriveViewController.swift */,
+				10691F3322C2528800CC1B64 /* FavViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,11 +233,15 @@
 				10691F0822C219E600CC1B64 /* gear.png */,
 				10691F0622C2192F00CC1B64 /* car-yellow.png */,
 				10691F1922C21CC600CC1B64 /* blur-2.png */,
-				10691F1522C21AB000CC1B64 /* gears.png */,
 				10691F0922C219E600CC1B64 /* his.png */,
 				10691F1222C21AA400CC1B64 /* burger.png */,
 				10691F1722C21B2100CC1B64 /* miniburger.png */,
+				10691F2622C238B100CC1B64 /* car.png */,
+				10691F3522C2530300CC1B64 /* plus.png */,
+				10691F2522C238B100CC1B64 /* rules.png */,
+				10691F2722C238B100CC1B64 /* walking.png */,
 				10691EFA22C2027200CC1B64 /* person.png */,
+				10691F2322C2365D00CC1B64 /* selectedCar.png */,
 				10691EF922C2027200CC1B64 /* textfield.png */,
 			);
 			path = Resources;
@@ -353,6 +378,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10691F2922C238B100CC1B64 /* car.png in Resources */,
+				10691F2A22C238B100CC1B64 /* walking.png in Resources */,
 				10691F1322C21AA400CC1B64 /* burger.png in Resources */,
 				10691F0C22C219E600CC1B64 /* his.png in Resources */,
 				10691F0722C2192F00CC1B64 /* car-yellow.png in Resources */,
@@ -360,10 +387,13 @@
 				10691F0122C210BF00CC1B64 /* mail.png in Resources */,
 				10691F0B22C219E600CC1B64 /* gear.png in Resources */,
 				10691EFD22C2027200CC1B64 /* person.png in Resources */,
+				10691F2822C238B100CC1B64 /* rules.png in Resources */,
 				10691EFC22C2027200CC1B64 /* textfield.png in Resources */,
+				10691F3622C2530300CC1B64 /* plus.png in Resources */,
 				10691F1822C21B2100CC1B64 /* miniburger.png in Resources */,
 				10691ECB22C1FBF400CC1B64 /* LaunchScreen.storyboard in Resources */,
 				10691EC822C1FBF400CC1B64 /* Assets.xcassets in Resources */,
+				10691F2422C2365D00CC1B64 /* selectedCar.png in Resources */,
 				10691EFB22C2027200CC1B64 /* password.png in Resources */,
 				10691F1A22C21CC600CC1B64 /* blur-2.png in Resources */,
 				10691EC622C1FBF300CC1B64 /* Main.storyboard in Resources */,
@@ -481,10 +511,14 @@
 				10691EC322C1FBF300CC1B64 /* ViewController.swift in Sources */,
 				10691F2022C2222E00CC1B64 /* CustomTableViewCell.swift in Sources */,
 				10691F0522C2175E00CC1B64 /* Car.swift in Sources */,
+				10691F3422C2528800CC1B64 /* FavViewController.swift in Sources */,
+				10691F2E22C2435300CC1B64 /* History.swift in Sources */,
+				10691F3222C24D7A00CC1B64 /* DriveViewController.swift in Sources */,
 				10691EC122C1FBF300CC1B64 /* AppDelegate.swift in Sources */,
 				10691F0322C215F000CC1B64 /* MapViewController.swift in Sources */,
 				10691F1E22C2219000CC1B64 /* HistoryViewController.swift in Sources */,
 				10691F2222C222F900CC1B64 /* TableViewController.swift in Sources */,
+				10691F3022C2455700CC1B64 /* TimerViewController.swift in Sources */,
 				10691F1C22C21D1900CC1B64 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,7 +696,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UY8NJD89S2;
+				DEVELOPMENT_TEAM = 99322725TZ;
 				INFOPLIST_FILE = Deno/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -681,7 +715,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UY8NJD89S2;
+				DEVELOPMENT_TEAM = 99322725TZ;
 				INFOPLIST_FILE = Deno/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
